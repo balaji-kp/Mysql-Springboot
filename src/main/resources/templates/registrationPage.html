@@ -1,0 +1,22 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Home Page </title>
+	</head>
+	<body>
+		<h1>welcome to Registration page</h1>
+		<form th:action="@{/register}" method="post" th:object="${user}">		
+			Enter the name : <input type="text" id="name" name="name" th:field="*{name}"><br><br>
+			Enter the username : <input type="text" id="username" name="username"  th:field="*{username}"><br><br>
+			Enter the password : <input type="text" id="password" name="password" th:field="*{password}"><br><br>
+			Enter the dob : <input type="text" id="dob" name="dob"  th:field="*{dob}"><br><br>
+			
+			<label>Select Technology:</label>
+			Java <input type="checkbox" id="technology" value="java" name="technology"  th:field="*{technology}">
+			Python <input type="checkbox" id="technology" value="python" name="technology"  th:field="*{technology}">
+			NodeJs <input type="checkbox" id="technology" value="NodeJS" name="technology"  th:field="*{technology}">
+			Angular <input type="checkbox" id="technology" value="Angular" name="technology"  th:field="*{technology}">
+		
+			<button type="submit"> Save Form</button>
+		</form> 
+	</body>
+</html>
