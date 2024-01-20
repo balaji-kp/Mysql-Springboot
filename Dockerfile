@@ -7,5 +7,5 @@ RUN apt update -y && apt upgrade -y
 RUN apt install openjdk-17-jdk -y && apt install maven -y && apt install git -y && git clone https://github.com/balaji-kp/Mysql-Springboot.git
 WORKDIR /Mysql-Springboot
 RUN mvn clean install 
-EXPOSE 5000
+EXPOSE 8090
 ENTRYPOINT ["java","-jar","target/springboot-Mysql-loginpageDemo.jar"]
